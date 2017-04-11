@@ -39,9 +39,9 @@ def get_user_password():
     return getpass.getpass(prompt='\nPlease, enter password> ', stream=None)
 
 
-def get_online_friends(login, password, APP_ID):
+def get_online_friends(login, password, app_id):
     session = vk.AuthSession(
-        app_id=APP_ID,
+        app_id=app_id,
         user_login=login,
         user_password=password,
     )
@@ -63,11 +63,11 @@ if __name__ == '__main__':
     parser = create_parser()
     parser.check_python_version()
     args = parser.parse_args()
-    APP_ID = args.app_id if args.app_id else None
-    if APP_ID:
+    app_id = args.app_id if args.app_id else None
+    if app_id:
         login = get_user_login()
         password = get_user_password()
-        friends_online = get_online_friends(login, password, APP_ID)
+        friends_online = get_online_friends(login, password, app_id)
         output_friends_to_console(friends_online)
     else:
         sys.stderr.write('Error: {}\n'.format('Enter your application ID'))
