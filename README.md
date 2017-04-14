@@ -10,19 +10,17 @@ This script requires that you had the Python interpreter (version 3.5 and higher
 
 ```#!bash
 
-$ python vk_friends_online.py --app_id 32423453  # possibly requires call of python3 executive instead of just python
-
-Please, enter username> vasya                         # enter your username in VK, e.g. myusername@mail.ru
-
-Please, enter password>  asdfasd_2342                 # enter your password 
+$ python vk_friends_online.py --app_id 32423453 --login vasya # possibly requires call 
+                                                              # of python3 executive instead of just python
+Please, enter password>  asdfasd_2342                         # enter your password 
 
 Number of friends online - 14
 
-Inga Frost, account name: inga_fr
+Inga Frost
 
-Mila Secundus, account name: mila_sec
+Mila Secundus
 
-Amalya Verter, account name: id2674198
+Amalya Verter
 
 ```
 
