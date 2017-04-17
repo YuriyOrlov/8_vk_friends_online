@@ -1,6 +1,5 @@
 import argparse
 import textwrap
-import sys
 
 
 class TerminalArgumentsParser(argparse.ArgumentParser):
@@ -22,8 +21,3 @@ class TerminalArgumentsParser(argparse.ArgumentParser):
                           help='Enter your login name,\
                               e.g --login vasya)',
                           type=str, default=None, required=True)
-
-    def check_python_version(self):
-        if sys.version_info < (3, 5):
-            self.print_help()
-            raise SystemExit('\nSorry, this code needs Python 3.5 or higher\n')

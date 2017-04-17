@@ -28,10 +28,9 @@ def output_friends_to_console(friends_online):
 
 if __name__ == '__main__':
     parser = TerminalArgumentsParser()
-    parser.check_python_version()
     args = parser.parse_args()
-    app_id = args.app_id if args.app_id else None
-    login = args.login if args.login else None
+    app_id = args.app_id
+    login = args.login
     if app_id and login:
         password = get_user_password()
         friends_online = get_online_friends(login, password, app_id)
