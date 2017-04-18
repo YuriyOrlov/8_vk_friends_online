@@ -31,7 +31,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     app_id = args.app_id
     login = args.login
-    if app_id and login:
-        password = get_user_password()
-        friends_online = get_online_friends(login, password, app_id)
-        output_friends_to_console(friends_online)
+    password = get_user_password()
+    friends_online = get_online_friends(login, password, app_id)
+    output_friends_to_console(friends_online)
